@@ -1,0 +1,8 @@
+**.DS_Store
+venv
+**.pyc
+**.tar.gz
+requirements.txt
+.idea
+site-packages
+**.log

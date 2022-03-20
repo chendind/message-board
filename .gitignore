@@ -1,0 +1,12 @@
+**.DS_Store
+venv
+**.pyc
+**.tar.gz
+.idea
+site-packages
+**.zip
+__pycache__
+.pytest_cache
+**.tar
+migrations
+**.log

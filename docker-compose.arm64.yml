@@ -1,0 +1,31 @@
+version: "3"
+services:
+  mysql:
+    image: amd64/mysql:5.7
+    container_name: mb_mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=U72lDfv6
+      - TZ=Asis/Shanghai
+    volumes:
+      - database:/var/lib/mysql
+      - ./etc/mysql:/etc/mysql
+      - ./mysql/init:/docker-entrypoint-initdb.d
+    restart: always
+  flaskapp:
+    image: chendind/flaskapp:message-board
+    container_name: mb_flaskapp
+    volumes:
+      - ./flaskapp/app:/app
+      - site-packages:/usr/local/lib/python2.7/site-packages
+    restart: always
+    command: /bin/bash -c "gunicorn --chdir /app manage:app -c /app/gunicorn.conf"
+    environment:
+      - FLASK_APP=/app/manage.py
+    ports:
+      - 8090:8090
+    tty: true
+    depends_on:
+      - mysql
+volumes:
+  database:
+  site-packages:
