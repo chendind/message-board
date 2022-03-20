@@ -16,7 +16,7 @@ Use Python+ database to make a simple "tree message" website.Messages can be rep
 - docker
 - docker-compose
 - Node v14+
-- 端口8090可用 / localhost port 8090 is available
+- localhost port 8090 is available
 
 #### The command to run
 ##### If your computer is arm architecture
