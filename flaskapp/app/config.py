@@ -11,7 +11,7 @@ class Config:
     SQLALCHEMY_TRACK_MODIFICATIONS = False
 
 class DefaultConfig(Config):
-    SQLALCHEMY_DATABASE_URI = 'mysql://root:U72lDfv6@mb_mysql/message_board?charset=utf8mb4'
+    SQLALCHEMY_DATABASE_URI = 'mysql://root:aa111111@mb_mysql/message_board?charset=utf8mb4'
 
 config = {
     'default': DefaultConfig

@@ -4,7 +4,7 @@ services:
     image: amd64/mysql:5.7
     container_name: mb_mysql
     environment:
-      - MYSQL_ROOT_PASSWORD=U72lDfv6
+      - MYSQL_ROOT_PASSWORD=aa111111
       - TZ=Asis/Shanghai
     volumes:
       - database:/var/lib/mysql
